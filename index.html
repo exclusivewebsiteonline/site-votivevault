@@ -277,7 +277,7 @@
       </div>
 
       <div class="join-box">
-        <form id="signup" class="signup js-signup" action="#preview-signup" method="post" data-success="#join-success">
+        <form id="signup" class="signup js-signup" action="https://script.google.com/macros/s/AKfycbwM8969U-0HjBFBlDRyBb0HBU5hyh1Fn8ZZG0k0yXCxzpXP4FOaskpl7tL14DuU6Gcr/exec" method="post" data-success="#join-success">
           <div class="field">
             <label for="name">First name <span class="optional">(optional)</span></label>
             <input id="name" name="name" type="text" autocomplete="given-name" maxlength="80">
@@ -291,10 +291,11 @@
             <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
           </div>
           <input type="hidden" name="source" value="website">
-          <button disabled data-preview-disabled class="btn btn-dark btn-block" type="submit">Sign me up</button>
+          <button class="btn btn-dark btn-block" type="submit">Sign me up</button>
           <p class="form-msg" role="status" aria-live="polite"></p>
           <p class="consent">By signing up you agree to get emails from Votive Vault. Unsubscribe anytime. <a href="privacy.html" target="_blank" rel="noopener">Privacy</a></p>
-        </form>
+          <input type="hidden" name="slug" value="votivevault">
+</form>
 
         <div class="signup-success" id="join-success" hidden tabindex="-1">
           <p class="success-title">You&rsquo;re in! 🎉</p>
@@ -352,7 +353,7 @@
       <p class="eyebrow">Before you go</p>
       <h2 id="shop-modal-title">Stay in the loop</h2>
       <p id="shop-modal-desc" class="modal-lead">Sign up to be the first to know about sales and new products.</p>
-      <form class="signup js-signup" action="#preview-signup" method="post" data-success="#modal-success" data-context="modal">
+      <form class="signup js-signup" action="https://script.google.com/macros/s/AKfycbwM8969U-0HjBFBlDRyBb0HBU5hyh1Fn8ZZG0k0yXCxzpXP4FOaskpl7tL14DuU6Gcr/exec" method="post" data-success="#modal-success" data-context="modal">
         <div class="field">
           <label for="m-name">First name <span class="optional">(optional)</span></label>
           <input id="m-name" name="name" type="text" autocomplete="given-name" maxlength="80">
@@ -366,10 +367,11 @@
           <input id="m-website" name="website" type="text" tabindex="-1" autocomplete="off">
         </div>
         <input type="hidden" name="source" value="shop-popup">
-        <button disabled data-preview-disabled class="btn btn-primary btn-block" type="submit">Sign me up</button>
+        <button class="btn btn-primary btn-block" type="submit">Sign me up</button>
         <p class="form-msg" role="status" aria-live="polite"></p>
         <p class="consent">By signing up you agree to get emails from Votive Vault. Unsubscribe anytime. <a href="privacy.html" target="_blank" rel="noopener">Privacy</a></p>
-      </form>
+        <input type="hidden" name="slug" value="votivevault">
+</form>
       <a class="modal-skip js-skip" href="https://www.etsy.com/shop/VotiveVault">No thanks, take me to the shop &rarr;</a>
     </div>
 
@@ -381,7 +383,7 @@
   </div>
 </dialog>
 
-<script src="preview.js" defer></script>
+<script src="signup.js" defer></script>
 <script src="main.js?v=20261008" defer></script>
 <script>window.goatcounter={path:function(p){return location.host+p}}</script>
 <script data-goatcounter="https://exclusivewebsite.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
