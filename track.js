@@ -37,7 +37,7 @@
     if (e.defaultPrevented) return; // e.g. Shop button that opened the popup instead
     if (e.type === 'click' && e.button !== 0) return;
     if (e.type === 'auxclick' && e.button !== 1) return;
-    var how = a.classList.contains('js-skip') ? 'no thanks' : a.classList.contains('js-continue') ? 'after signup' : 'direct';
+    var how = a.classList.contains('js-skip-top') ? 'skip top' : a.classList.contains('js-skip') ? 'no thanks' : a.classList.contains('js-continue') ? 'after signup' : 'direct';
     var sent = send('etsy-click-' + slug, 'Went to Etsy (' + slug + ', ' + how + ')');
     // Only if the hit can't outlive the page (no sendBeacon): hold a same-tab click briefly, then go anyway.
     if (sent && !navigator.sendBeacon && e.type === 'click' && !a.target && !(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey)) {
